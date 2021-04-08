@@ -31,6 +31,7 @@ namespace VirtualMachineDetection
 									  mo["Name"].ToString());
 					name = mo["Model"].ToString();
 				}
+
 			}
 
 			MessageBox.Show(name);
