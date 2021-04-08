@@ -12,14 +12,28 @@ namespace VirtualMachineDetection
 	{
 		public void Run()
 		{
-			string os_query = "SELECT * FROM Win32_OperatingSystem";
-			ManagementObjectSearcher os_searcher = new ManagementObjectSearcher(os_query);
-			foreach (ManagementObject info in os_searcher.Get())
+			//string os_query = "SELECT * FROM Win32_OperatingSystem";
+			//ManagementObjectSearcher os_searcher = new ManagementObjectSearcher(os_query);
+			//foreach (ManagementObject info in os_searcher.Get())
+			//{
+			//	Console.WriteLine(info.Properties["Name"].Value);
+			//}
+			ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
+			//collection to store all management objects
+			ManagementObjectCollection moc = mc.GetInstances();
+			string name = " ";
+			if (moc.Count != 0)
 			{
-				Console.WriteLine(info.Properties["Name"].Value.ToString());
+				foreach (ManagementObject mo in mc.GetInstances())
+				{
+					// display general system information
+					Console.WriteLine("\nMachine Model: {0}",
+									  mo["Name"].ToString());
+					name = mo["Model"].ToString();
+				}
 			}
 
-			MessageBox.Show("This computer is in a virtual enviroment");
+			MessageBox.Show(name);
 		}
 
 	}

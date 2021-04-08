@@ -1,0 +1,7 @@
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\bin\Debug\VirtualMachineDetection.dll
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\bin\Debug\VirtualMachineDetection.pdb
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\obj\Debug\VirtualMachineDetection.csproj.CoreCompileInputs.cache
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\obj\Debug\VirtualMachineDetection.csproj.CopyComplete
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\obj\Debug\VirtualMachineDetection.dll
+C:\Users\nesto\Source\Repos\VirtualMachineDetection\obj\Debug\VirtualMachineDetection.pdb
