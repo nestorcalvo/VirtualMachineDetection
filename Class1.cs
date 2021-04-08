@@ -16,7 +16,7 @@ namespace VirtualMachineDetection
 			ManagementObjectSearcher os_searcher = new ManagementObjectSearcher(os_query);
 			foreach (ManagementObject info in os_searcher.Get())
 			{
-				Console.WriteLine(info.Properties["Name"].Value.ToString());
+				Console.WriteLine(info.Properties["Model"].Value.ToString());
 			}
 
 			MessageBox.Show("This computer is in a virtual enviroment");
