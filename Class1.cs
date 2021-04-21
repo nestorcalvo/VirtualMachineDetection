@@ -10,7 +10,7 @@ namespace VirtualMachineDetection
 {
 	public class Detection
 	{
-		public void Run()
+		public bool Run()
 		{
 			//string os_query = "SELECT * FROM Win32_OperatingSystem";
 			//ManagementObjectSearcher os_searcher = new ManagementObjectSearcher(os_query);
@@ -22,6 +22,7 @@ namespace VirtualMachineDetection
 			//collection to store all management objects
 			ManagementObjectCollection moc = mc.GetInstances();
 			string name = " ";
+			bool vm = false;
 			if (moc.Count != 0)
 			{
 				foreach (ManagementObject mo in mc.GetInstances())
@@ -34,7 +35,8 @@ namespace VirtualMachineDetection
 
 			}
 
-			MessageBox.Show(name);
+			vm = (name.Substring(0, 2) == "VA" ? true : false);
+			return vm;
 		}
 
 	}
