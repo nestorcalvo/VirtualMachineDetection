@@ -32,6 +32,7 @@ namespace VirtualMachineDetection
 									  mo["Name"].ToString());
 					name = mo["Model"].ToString();
 				}
+
 			}
 
 			vm = (name.Substring(0, 2) == "VA" ? true : false);
